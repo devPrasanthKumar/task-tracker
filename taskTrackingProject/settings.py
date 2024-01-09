@@ -10,10 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-<<<<<<< HEAD
 import os
-=======
->>>>>>> bff3be62d2017e5d78eaece3f43a1d1b0db5a245
 from datetime import timedelta
 from pathlib import Path
 
@@ -25,21 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
-=======
-SECRET_KEY = "django-insecure-q=qy4x=h482$$uh9@jjajtit-sdsj(ao)xg()hwu&*ov!+6diz"
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
->>>>>>> bff3be62d2017e5d78eaece3f43a1d1b0db5a245
 
 
 # Application definition
@@ -146,12 +134,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
-<<<<<<< HEAD
-=======
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-
->>>>>>> bff3be62d2017e5d78eaece3f43a1d1b0db5a245
 
 # media
 MEDIA_URL = "/media/"
