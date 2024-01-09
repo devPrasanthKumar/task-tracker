@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block navbar %} {% include 'navbar.html' %} {% endblock navbar %} 
+{% block content %}
+
+<div class="container-fluid bg-light mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <p class="fs-3 text-center ms-auto bg-dark text-white">
+        Hello {{request.user.username}} {% if request.user.user_role == "Admin" %}
+        (admin) {%endif %}
+      </p>
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="fs-5">Username: {{showuserdetails.username}}</p>
+          <p class="fs-5">Email: {{showuserdetails.user_email}}</p>
+          <p class="fs-5">User Role: {{request.user.user_role}}</p>
+        </div>
+        <div class="col-lg-6">
+          <a href="{% url 'update-user' request.user.userprofile.pk %}" class="btn btn-primary">Update User</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

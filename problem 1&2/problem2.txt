@@ -1,0 +1,39 @@
+A. Write and share a small note about your choice of system to schedule periodic tasks (such as downloading a list of ISINs every 24 hours). Why did you choose it? Is it reliable enough; Or will it scale? If not, what are the problems with it? And, what else would you recommend to fix this problem at scale in production?
+
+
+answer:
+
+I would choose celery for scheduling periodic tasks like downloading list of ISINs every 24 hours
+celery is widely used for distributed task processing. It allows us to execute tasks asynchronously, making it suitable for periodic tasks
+
+Why celery:
+1.Reliability
+2.Scalability
+3.Asynchronous
+4.Configuration
+5.Monitoring
+
+what else would you recommend to fix this problem at scale in production?
+1.Auto-Scaling
+2.Task Optimization
+3.Error Handling and Retry Strategies
+4.Result Backend Optimization
+5.Security Best Practices
+
+
+B. In what circumstances would you use Flask instead of Django and vice versa? 
+
+We can build a large scale web applications by Django , For Small Projects we can go with flask..
+Even many companies like instagram,Youtube,pinterest,spotify these comoanies are using a django for their backend
+
+Use Flask when:
+1.Flask is lightweight and suitable for small to medium-sized projects 
+2.Flask provides more flexibility and allows developers to choose components and libraries based on project needs.
+3.If you're primarily building RESTful APIs or microservices without the need for a full-stack framework,
+
+Use Django when:
+1.full-stack framework that includes an ORM, authentication, admin interface, and more. It's suitable for projects where an integrated
+2.Django has many built-in features 
+3.django is more securable , it has authentication,authorization,middlewares
+4.Django includes a powerful admin interface by default,
+5.it has large scale community..

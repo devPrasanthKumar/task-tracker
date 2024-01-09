@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock title %} 
+{% load crispy_forms_tags %} {% block content %}
+<div class="container">
+  <div
+    class="row justify-content-center align-items-center"
+    style="min-height: 100vh">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Create an account</h2>
+          <form action="" method="post">
+            {% csrf_token %} 
+            {{form | crispy }}
+            <button type="submit" class="w-100 btn mt-3 btn-primary btn-block">
+              Create
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
