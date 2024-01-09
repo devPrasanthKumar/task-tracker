@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock title %}
+ {% block navbar %} {% include 'navbar.html' %} {% endblock navbar %} 
+ {% load crispy_forms_tags %} {% block content %}
+<div class="container-fluid bg-light mt-5">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+       <p class="fs-3 text-center ms-auto bg-dark text-white">
+        Hello {{request.user.username}} {% if request.user.user_role == "Admin" %}
+        (admin) {%endif %}
+      </p>
+      <p class="fs-4 text-center">{{singleapp.app_name}}</p>
+      <a href="{{singleapp.app_link}}">{{singleapp.app_link}}</a> <br />
+      <br />
+      <!-- Add the dropzone area -->
+
+      <form
+        action="{% url 'single-app' singleapp.pk %}"
+        method="post"
+        class="dropzone"
+        id="my-awesome-dropzone"
+        enctype="multipart/form-data">
+        {% csrf_token %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

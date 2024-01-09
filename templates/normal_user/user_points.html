@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %} 
+{% block navbar %} {% include 'navbar.html' %} {% endblock navbar %} 
+{% block content %}
+
+<div class="container-fluid bg-light mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <p class="fs-3 text-center ms-auto bg-dark text-white">
+        Hello {{request.user.username}} {% if request.user.user_role == "Admin" %}
+        (admin) {%endif %}
+      </p>
+      <div class="col-lg-7">
+        <p class="fs-2 text-center">
+          Your Total Points : {{totalpoints.total_points}}
+        </p>
+        <p class="fs-4">Apps:</p>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th scope="col">App Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul class="list-unstyled">
+                    {% for task in app.task_app.all %}
+                      {{task.app}}
+                    {% endfor %}
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+mkn
