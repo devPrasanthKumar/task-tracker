@@ -25,7 +25,7 @@ class UpdateUserProfileView(LoginRequiredMixin, UpdateView):
 
     # checks the data if it is valid it will save to the db
     def form_valid(self, form):
-        form.instance.user = self.request.user.userprofile.pk
+        form.instance.user = self.request.user
         form.save()
         return super().form_valid(form)
 

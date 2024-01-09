@@ -9,7 +9,7 @@
 
 {% block content %}
   <p class="fs-3 text-center ms-auto bg-dark text-white">
-    Hello {{ request.user.username }} {% if request.user.user_role == "Admin" %}
+    Hello {{ request.user.userprofile.username }} {% if request.user.user_role == "Admin" %}
     (admin) {% endif %}
   </p>
   <div class="container mt-4">
