@@ -81,3 +81,7 @@ If you want to run the project locally:
    ```
 
    Access the application at `http://localhost:8000/`.
+
+Authors
+
+prasanthkumar\

@@ -138,4 +138,3 @@ A signal has been implemented to automatically create a user profile when a user
 Authors
 
 prasanthkumar\
-    Email: prasanth52010@gmail.com
