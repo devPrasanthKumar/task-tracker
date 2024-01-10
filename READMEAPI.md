@@ -9,7 +9,7 @@ This Django REST framework API provides features for user management, app creati
 1\. **Clone the repository:**
 
 ```plaintext\
-   git clone https://github.com/devPrasanthKumar/user-management-and-task-tracking.git
+   git clone https://gitlab.com/devPrasanthKumar/task-trackerr.git
   
 
 python -m venv venv\\
@@ -29,21 +29,21 @@ python manage.py runserver
 
 
 -   Method - POST
--   **Endpoint:** /register/\
+-   **Endpoint:** /api/auth/register/\
 -   Users can create an account by providing a username, email, and password.\
 -   Passwords are validated for strength.
 
 #### User Login
 
 -   Method - POST
--   **Endpoint:** /login/\
+-   **Endpoint:** /api/auth/login/\
 -   Users can log in with their email and password.\
 -   If already logged in, users are redirected to the home page.
 
 #### User Logout
 
 -   Method - POST
--   **Endpoint:** /logout/\
+-   **Endpoint:** /api/auth/logout/\
 -   Users can log out, and they are redirected to the login page.
 
 ### User Management
@@ -58,7 +58,7 @@ python manage.py runserver
 #### View User Profile
 
 - Method - GET
--   **Endpoint:** /showuserprofile/<uuid:pk>/\
+-   **Endpoint:** /api/showuserprofile/<uuid:pk>/\
 -   Users can view their user profile details.
 
 ### App Management
@@ -66,38 +66,38 @@ python manage.py runserver
 #### Create App
 
 -   Method - POST
--   **Endpoint:** /addapp/\
+-   **Endpoint:** /api/addapp/\
 -   Administrators can create new apps by providing details such as app name, link, category, and sub-category.
 
 #### Update App
 
 -   Method - PUT
--   **Endpoint:** /addapp/<int:pk>\
+-   **Endpoint:** /api/addapp/<int:pk>\
 -   Administrators can update exisiting app's details such as app name, link, category, and sub-category.
 
 #### Update App
 
 
 -   Method - PATCh
--   **Endpoint:** /addapp/<int:pk>\
+-   **Endpoint:** /api/addapp/<int:pk>\
 -   Administrators can partially update exisiting app's details such as app name, link, category, and sub-category.
 
 #### Delete App
 
 -   Method - DELETE
--   **Endpoint:** /addapp/<int:pk>\
+-   **Endpoint:** /api/addapp/<int:pk>\
 -   Administrators can delete exisiting app by id.
 
 ####  View all App  (for User)
 
 -   Method - GET
--   **Endpoint:** /showappsforuser/\
+-   **Endpoint:** /api/showappsforuser/\
 -   Users can view all app, including its name, link, and category.
 
 ####  View a app Details (for User)
 
 -   Method - GET
--   **Endpoint:** /showappsforuser/<int:pk>\
+-   **Endpoint:** /api/showappsforuser/<int:pk>\
 -   Users can view details about a particular app, including its name, link, and category.
 
 ### Task Tracking
@@ -105,19 +105,19 @@ python manage.py runserver
 #### Upload Task
 
 -   Method - POST
--   **Endpoint:** /task/int:pk/\
+-   **Endpoint:** /api/task/int:pk/\
 -   Users can upload a task image for a specific app.
 
 #### View Completed Tasks
 
 -   Method - GET
--   **Endpoint:** /task/<int:pk>/\
+-   **Endpoint:** /api/task/<int:pk>/\
 -   Users can view a list of tasks they have completed.
 
 #### View User Points
 
 -   Method - GET
--   **Endpoint:** /userpoints/\
+-   **Endpoint:** /api/userpoints/\
 -   Users can view their total points earned from completed tasks.
 
 ## Models\

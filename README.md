@@ -21,7 +21,7 @@ Clone the repository:
 
 bash
 
-git clone https://github.com/devPrasanthKumar/user-management-and-task-tracking.git
+git clone https://gitlab.com/devPrasanthKumar/task-trackerr.git
 
 Create and activate a virtual environment:
 
