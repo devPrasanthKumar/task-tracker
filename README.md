@@ -2,7 +2,7 @@ Django User Management and Task Tracking System
 
 This Django project serves as a comprehensive user management system with features like user registration, login, logout, user profile management, app creation, task tracking, and more. The system is designed to allow administrators to create and manage apps, while normal users can interact with the platform by uploading tasks and tracking their points.\
 
-website : https://task-tracking-qd65.onrender.com/
+website : https://new-task-tracker.onrender.com/
 
 Table of Contents
 
