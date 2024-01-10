@@ -6,9 +6,11 @@ This Django REST framework API provides features for user management, app creati
 
 ## URLs:
 
-   api  : https://new-task-tracker.onrender.com/api/
-   api authentication : https://new-task-tracker.onrender.com/api/auth/
-   swagger(documentation) : https://new-task-tracker.onrender.com/api/swagger/
+   api  : https://new-task-tracker.onrender.com/api/
+
+   api authentication : https://new-task-tracker.onrender.com/api/auth/
+
+   swagger(documentation) : https://new-task-tracker.onrender.com/api/swagger/
 
 ## Installation
 
